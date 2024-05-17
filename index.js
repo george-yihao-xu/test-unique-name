@@ -13,4 +13,14 @@ const name2 = uniqueNamesGenerator({
   seed: seed2,
 });
 
+if (seed1 === seed2) {
+  throw new error("Same seeds provided");
+}
+
 console.log("name1:", name1, "name2:", name2);
+
+if (name1 === name2) {
+  console.log("Same name generated for different seed  😲");
+} else {
+  console.log("Different names generated for different seeds");
+}
